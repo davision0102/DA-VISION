@@ -1,0 +1,1 @@
+Instructions spécialisées pour certains comportements ou automatisations.
