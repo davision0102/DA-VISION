@@ -1,6 +1,6 @@
 # LDDAB Studio
 
-Base personnelle pour organiser, tester et présenter mes projets.
+Template personnel pour créer rapidement des sites, apps, prototypes et playgrounds.
 
 ## Stack
 - React
@@ -8,15 +8,19 @@ Base personnelle pour organiser, tester et présenter mes projets.
 - Vite
 - Tailwind CSS
 - TanStack Router
+- shadcn/ui
 - Conductor
 
-## Objectifs
-- centraliser mes projets personnels
-- créer une base réutilisable
-- publier des projets en ligne
-- tester des interfaces
+## Objectif
+Avoir une base réutilisable pour lancer facilement de nouveaux projets personnels.
 
-## Lancer le projet
+## Utilisation
+1. Créer un nouveau repo depuis ce template
+2. Ouvrir le projet
+3. Installer les dépendances
+4. Lancer le projet
+
+## Commandes
 
 ```bash
 npm install
@@ -26,13 +30,9 @@ Sauvegarde.
 
 ---
 
-# Étape 3 — supprimer ce qui ne sert plus
+# Étape 3 — vérifier `.gitignore`
 
-Comme tu utilises maintenant `TanStack Router`, le fichier `src/App.tsx` n’est plus utile dans l’immédiat.
-
-Tu peux soit le laisser, soit le supprimer.
-
-Pour simplifier, je te conseille de le supprimer :
+Ouvre :
 
 ```bash
-rm -f src/App.tsx
+open .gitignore
