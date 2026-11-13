@@ -1,16 +1,5 @@
 # CLAUDE.md
 
-## Objectif
-Espace personnel pour organiser, tester et présenter mes projets.
+Les instructions du projet sont dans @AGENTS.md (format partagé par tous les assistants IA).
 
-## Règles
-- garder une structure simple
-- organiser les projets clairement
-- éviter les fichiers inutiles
-- documenter les éléments importants
-
-## Structure
-- src : code principal
-- public : fichiers statiques
-- .claude/skills : instructions IA
-- .agents/skills : instructions spécialisées
+Les skills sont dans `.agents/skills/` ; `.claude/skills` est un lien vers ce dossier.

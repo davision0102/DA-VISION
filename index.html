@@ -1,10 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lddab-studio</title>
+    <meta
+      name="description"
+      content="Fabrik — le starter React prêt pour l’IA : Vite, Tailwind, shadcn/ui, TanStack Router."
+    />
+    <title>Fabrik</title>
+    <script>
+      // Applique le thème avant le premier rendu pour éviter un flash.
+      try {
+        const saved = localStorage.getItem('theme')
+        const dark = saved
+          ? saved === 'dark'
+          : matchMedia('(prefers-color-scheme: dark)').matches
+        if (dark) document.documentElement.classList.add('dark')
+        document.documentElement.style.colorScheme = dark ? 'dark' : 'light'
+      } catch {}
+    </script>
   </head>
   <body>
     <div id="root"></div>

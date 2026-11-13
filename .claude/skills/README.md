@@ -1,1 +1,0 @@
-Instructions pour guider l'assistant IA dans l'organisation et la création du projet.
