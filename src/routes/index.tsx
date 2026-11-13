@@ -4,9 +4,9 @@ import {
   Bot,
   Layers,
   MoonStar,
-  Route as RouteIcon,
+  Palette,
+  Rocket,
   ShieldCheck,
-  Sparkles,
 } from 'lucide-react'
 import { CopyCommand } from '@/components/copy-command'
 import { GithubIcon } from '@/components/github-icon'
@@ -21,33 +21,33 @@ export const Route = createFileRoute('/')({
 const features = [
   {
     icon: Bot,
-    title: 'Pensé pour travailler avec une IA',
-    text: 'Un fichier AGENTS.md explique le projet à ton assistant (Claude, Codex, Cursor…), et des fiches pratiques lui montrent comment ajouter une page ou un composant proprement.',
+    title: 'Tu décris, l’IA code',
+    text: 'Demande ce que tu veux à Claude, Cursor ou Codex en français. Le projet contient un mode d’emploi pour eux : ils ajoutent tes pages proprement au lieu de tout casser.',
   },
   {
     icon: Layers,
-    title: 'Des composants prêts à l’emploi',
-    text: 'Boutons, champs, fenêtres, cartes… basés sur shadcn/ui. Le code est dans ton projet, tu le modifies comme tu veux, et tu en ajoutes d’autres en une commande.',
+    title: 'Une bibliothèque de composants',
+    text: 'Boutons, champs, fenêtres, cartes : comme une librairie Figma, mais en vrai. Tu les vois tous sur la page Composants et tu les personnalises à ton goût.',
   },
   {
-    icon: RouteIcon,
-    title: 'Une page, un fichier',
-    text: 'Pour créer une page, tu ajoutes un fichier dans src/routes. Si un lien pointe vers une page qui n’existe pas, le projet te le signale avant la mise en ligne.',
+    icon: Palette,
+    title: 'Ton design system en variables',
+    text: 'Couleurs, polices et arrondis sont réglés dans un seul fichier, comme des variables Figma. Tu changes la couleur principale, tout le site suit.',
   },
   {
     icon: MoonStar,
     title: 'Mode clair et sombre',
-    text: 'Les deux thèmes marchent dès le départ, et le site se souvient du choix du visiteur. Pour changer la couleur principale, tu modifies une seule ligne.',
+    text: 'Les deux thèmes marchent dès le départ, sans rien faire. Le site se souvient même du choix de chaque visiteur.',
   },
   {
     icon: ShieldCheck,
-    title: 'Moins de bugs en ligne',
-    text: 'Le code est vérifié et mis en forme à chaque commit, et les tests tournent sur GitHub à chaque envoi. Les erreurs se voient avant d’arriver sur le site.',
+    title: 'Des garde-fous',
+    text: 'Si quelque chose ne va pas dans le code, le projet te prévient avant que ce soit en ligne. Pas besoin de comprendre comment ça marche pour en profiter.',
   },
   {
-    icon: Sparkles,
-    title: 'En ligne en un push',
-    text: 'Le site se publie tout seul sur GitHub Pages dès que tu envoies ton code. Vercel ou Netlify marchent aussi sans réglage particulier.',
+    icon: Rocket,
+    title: 'Un lien à partager',
+    text: 'Ton site se publie tout seul et gratuitement sur GitHub Pages. Tu obtiens une vraie adresse à envoyer à un client ou à mettre dans ton portfolio.',
   },
 ]
 
@@ -63,16 +63,16 @@ const stack = [
 
 const steps = [
   {
-    title: 'Copie le template',
-    text: 'Clique sur « Utiliser ce template » sur GitHub, ou lance la commande degit ci-dessus.',
+    title: 'Récupère le template',
+    text: 'Sur GitHub, clique sur « Utiliser ce template ». C’est gratuit, il te faut juste un compte.',
   },
   {
-    title: 'Lance le site',
-    text: 'npm install, puis npm run dev. Ton site s’ouvre sur ton ordinateur et se met à jour à chaque sauvegarde.',
+    title: 'Ouvre-le avec ton assistant IA',
+    text: 'Dans Claude Code, Cursor ou VS Code. Si c’est ta première fois, le guide du README t’accompagne pas à pas.',
   },
   {
-    title: 'Construis ton projet',
-    text: 'Modifie les pages toi-même ou demande à ton assistant IA : il suit les règles du projet.',
+    title: 'Décris ton site',
+    text: '« Ajoute une page portfolio avec mes projets en grille. » L’assistant s’en charge, tu ajustes le rendu.',
   },
 ]
 
@@ -107,9 +107,9 @@ function Hero() {
             {site.tagline}
           </span>
 
-          <h1 className="mt-6 text-5xl leading-[1.02] font-semibold tracking-tight sm:text-6xl lg:text-7xl">
-            Démarre ton projet React{' '}
-            <span className="text-brand">sans rien configurer.</span>
+          <h1 className="mt-6 text-5xl leading-[1.02] font-semibold tracking-tight sm:text-6xl lg:text-[4rem]">
+            Un vrai site React,{' '}
+            <span className="text-brand">même sans être développeur.</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-pretty text-muted-foreground">
@@ -175,10 +175,11 @@ function TerminalPreview() {
             </Line>
             <Line muted>➜ Local: http://localhost:5173/</Line>
             <Line>&nbsp;</Line>
-            <Line prompt>claude "ajoute une page tarifs"</Line>
+            <Line prompt>claude "ajoute une page portfolio"</Line>
             <Line muted>Lecture de AGENTS.md et des skills…</Line>
             <Line>
-              <span className="text-brand">✓</span> src/routes/pricing.tsx créé
+              <span className="text-brand">✓</span> src/routes/portfolio.tsx
+              créé
             </Line>
             <Line>
               <span className="text-brand">✓</span> lien ajouté dans la
@@ -233,9 +234,9 @@ function Features() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <SectionHeading
-        eyebrow="Ce qu’il y a dedans"
-        title="Tout ce qu’on règle d’habitude au début d’un projet."
-        text="Fabrik s’occupe de la configuration pour que tu commences directement par ce qui compte : ton site."
+        eyebrow="Ce qui est déjà prêt"
+        title="Tout ce qui fait peur au début est déjà réglé."
+        text="Pas besoin de savoir configurer un projet. Tu commences directement par la partie que tu préfères : le design."
       />
 
       <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
@@ -292,8 +293,8 @@ function FinalCta() {
           Prêt à commencer ?
         </h2>
         <p className="relative mx-auto mt-4 max-w-lg text-background/70">
-          C’est gratuit et open source. Utilise-le pour un site perso, un
-          prototype ou un vrai produit, et adapte-le à ta façon.
+          C’est gratuit et open source. Pour ton portfolio, un prototype à
+          montrer ou le site d’un client.
         </p>
         <div className="relative mt-8 flex flex-wrap justify-center gap-3">
           <a

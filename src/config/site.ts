@@ -4,9 +4,9 @@
  */
 export const site = {
   name: 'Fabrik',
-  tagline: 'Template React gratuit et open source',
+  tagline: 'Template React gratuit, pensé pour les designers',
   description:
-    'Fabrik est une base de départ pour tes sites et tes apps React. Les composants, le mode sombre, les tests et la mise en ligne sont déjà réglés, et ton assistant IA sait comment travailler dedans.',
+    'Fabrik te donne une base déjà prête : la mise en page, les composants, le mode sombre et la mise en ligne sont réglés. Tu décris ce que tu veux à ton assistant IA, il écrit le code en respectant le projet.',
   repo: 'davision0102/fabrik',
   /** Adresse de la démo en ligne (GitHub Pages, voir le skill `deploy`). */
   demoUrl: 'https://davision0102.github.io/fabrik/',
