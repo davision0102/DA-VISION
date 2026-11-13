@@ -38,10 +38,11 @@ function UiPage() {
         La boîte à outils
       </h1>
       <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-        Les composants déjà installés, dans {`src/components/ui`}. Pour en
-        ajouter un :{' '}
+        Tous les composants disponibles, en clair et en sombre. Pour en ajouter
+        un, demande-le simplement à ton assistant IA (« ajoute un composant Tabs
+        ») ou lance{' '}
         <code className="font-mono text-foreground">
-          npx shadcn add &lt;nom&gt;
+          npx shadcn@latest add &lt;nom&gt;
         </code>
         .
       </p>
