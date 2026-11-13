@@ -32,7 +32,7 @@ jobs:
       # Les pages sont gérées par le routeur côté navigateur : on sert index.html
       # pour toute adresse inconnue afin que /ui ou un lien partagé fonctionne.
       - run: cp dist/index.html dist/404.html
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
