@@ -9,13 +9,14 @@ Quand le template sert de base à un nouveau projet, voici tout ce qui porte l'i
 
 ## Fichiers à modifier
 
-1. **`src/config/site.ts`** — `name`, `tagline`, `description`, `repo` (`utilisateur/depot` sur GitHub). Tout le site lit ces valeurs.
+1. **`src/config/site.ts`** — `name`, `tagline`, `description`, `repo` (`utilisateur/depot` sur GitHub), `demoUrl`. Tout le site lit ces valeurs.
 2. **`package.json`** — le champ `name` (minuscules, tirets).
-3. **`index.html`** — `<title>` et `<meta name="description">`.
-4. **`public/favicon.svg`** et **`src/components/logo.tsx`** — la marque. Le logo utilise `fill-foreground` et `fill-brand` : il suit le thème automatiquement.
-5. **Couleur signature** — `--brand` dans `src/index.css` (voir le skill `design-system`).
-6. **`README.md`** et **`AGENTS.md`** — le nom et la description du projet.
-7. **`LICENSE`** — le nom du titulaire des droits.
+3. **`index.html`** — `<title>`, `<meta name="description">`, `theme-color` et les balises `og:*` (titre, description, URL de la démo).
+4. **`public/og-image.png`** — l'aperçu affiché lors d'un partage (1200 × 630). À refaire avec le nouveau nom.
+5. **`public/favicon.svg`** et **`src/components/logo.tsx`** — la marque. Le logo utilise `fill-foreground` et `fill-brand` : il suit le thème automatiquement.
+6. **Couleur signature** — `--brand` dans `src/index.css` (voir le skill `design-system`).
+7. **`README.md`** et **`AGENTS.md`** — le nom et la description du projet.
+8. **`LICENSE`** — le nom du titulaire des droits.
 
 ## Ensuite
 

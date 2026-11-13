@@ -1,12 +1,14 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router'
 import { GithubIcon } from '@/components/github-icon'
 import { Logo } from '@/components/logo'
+import { NotFound } from '@/components/not-found'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { buttonVariants } from '@/components/ui/button'
 import { site } from '@/config/site'
 
 export const Route = createRootRoute({
   component: RootLayout,
+  notFoundComponent: NotFound,
 })
 
 const navLinkClass =

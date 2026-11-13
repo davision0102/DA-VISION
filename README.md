@@ -8,12 +8,13 @@
 Une base moderne, propre et documentée pour lancer un site, une app ou un prototype en quelques minutes — avec ton assistant IA déjà briefé.
 
 [![CI](https://github.com/davision0102/DA-VISION/actions/workflows/ci.yml/badge.svg)](https://github.com/davision0102/DA-VISION/actions/workflows/ci.yml)
+[![Deploy](https://github.com/davision0102/DA-VISION/actions/workflows/deploy.yml/badge.svg)](https://davision0102.github.io/DA-VISION/)
 ![React 19](https://img.shields.io/badge/React-19-149eca)
 ![Vite 8](https://img.shields.io/badge/Vite-8-646cff)
 ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8)
 ![Licence MIT](https://img.shields.io/badge/licence-MIT-ff5a1f)
 
-[**Utiliser ce template →**](https://github.com/davision0102/DA-VISION/generate)
+[**Voir la démo**](https://davision0102.github.io/DA-VISION/) · [**Utiliser ce template →**](https://github.com/davision0102/DA-VISION/generate)
 
 <img src="docs/screenshot.png" alt="Page d'accueil de Fabrik" width="860" />
 
@@ -71,8 +72,18 @@ Skills inclus :
 - **add-component** — installer un composant shadcn/ui ou en créer un
 - **design-system** — couleurs, polices et règles visuelles
 - **rebrand** — renommer le projet et changer son identité
+- **add-test** — écrire un test Vitest + Testing Library
+- **add-form** — formulaire avec validation (react-hook-form + zod)
+- **fetch-data** — charger des données d'une API
+- **deploy** — mettre le site en ligne
 
 Essaie par exemple : _« ajoute une page tarifs avec trois offres »_.
+
+## Mettre en ligne
+
+Le site se publie tout seul sur **GitHub Pages** à chaque push sur `main` (`.github/workflows/deploy.yml`). Une seule action à faire : **Settings → Pages → Source : GitHub Actions**.
+
+Vercel, Netlify et Cloudflare Pages fonctionnent aussi sans configuration : le skill `deploy` détaille chaque option.
 
 ## Structure
 

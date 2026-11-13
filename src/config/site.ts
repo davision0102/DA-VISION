@@ -8,6 +8,8 @@ export const site = {
   description:
     'Une base moderne, propre et documentée pour lancer un site, une app ou un prototype en quelques minutes — avec ton assistant IA déjà briefé.',
   repo: 'davision0102/DA-VISION',
+  /** Adresse de la démo en ligne (GitHub Pages, voir le skill `deploy`). */
+  demoUrl: 'https://davision0102.github.io/DA-VISION/',
   get githubUrl() {
     return `https://github.com/${this.repo}`
   },

@@ -37,6 +37,7 @@ src/
   routes/             une page = un fichier (TanStack Router)
   components/         composants de l'app
   components/ui/      composants shadcn — générés, modifiables
+  components/not-found.tsx  page 404
   hooks/              hooks React réutilisables
   lib/utils.ts        cn() pour fusionner les classes
   index.css           thème : couleurs, polices, rayons
@@ -61,6 +62,10 @@ Recettes dans `.agents/skills/` — lis la bonne avant de commencer :
 - `add-component` — installer un composant shadcn/ui
 - `design-system` — couleurs, polices et règles visuelles du thème
 - `rebrand` — renommer le projet et changer son identité
+- `add-test` — écrire un test Vitest + Testing Library
+- `add-form` — formulaire avec validation (react-hook-form + zod)
+- `fetch-data` — charger des données d'une API
+- `deploy` — mettre le site en ligne (GitHub Pages déjà configuré)
 
 ## Outils MCP
 
