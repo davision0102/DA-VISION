@@ -1,0 +1,166 @@
+<!doctype html>
+<!--
+  Source de public/og-image.png, l'aperçu affiché quand on partage le lien du site.
+  Pour la regénérer après un changement de nom ou de texte (voir le skill `rebrand`) :
+  ouvre ce fichier dans Chrome, fenêtre de 1200 × 630, et fais une capture,
+  ou demande à ton assistant IA de le faire.
+-->
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Image de partage</title>
+    <style>
+      @font-face {
+        font-family: Heading;
+        src: url(../node_modules/@fontsource-variable/bricolage-grotesque/files/bricolage-grotesque-latin-wght-normal.woff2);
+        font-weight: 200 800;
+      }
+      @font-face {
+        font-family: Body;
+        src: url(../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2);
+        font-weight: 100 900;
+      }
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+      }
+      body {
+        position: relative;
+        background: #fbf9f5;
+        color: #1c1914;
+        font-family: Body, sans-serif;
+      }
+      .dots {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(
+          rgba(28, 25, 20, 0.12) 1.2px,
+          transparent 1.2px
+        );
+        background-size: 26px 26px;
+        -webkit-mask-image: radial-gradient(
+          ellipse at 75% 20%,
+          #000 15%,
+          transparent 65%
+        );
+      }
+      .glow {
+        position: absolute;
+        top: -240px;
+        right: -120px;
+        width: 760px;
+        height: 420px;
+        border-radius: 50%;
+        background: #ff6a30;
+        opacity: 0.22;
+        filter: blur(110px);
+      }
+      .wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 72px 80px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+      .brand span {
+        font-family: Heading;
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+      h1 {
+        margin-top: 48px;
+        font-family: Heading;
+        font-size: 72px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: -0.035em;
+      }
+      h1 em {
+        font-style: normal;
+        color: #ec5520;
+      }
+      p {
+        max-width: 760px;
+        margin-top: 26px;
+        font-size: 26px;
+        line-height: 1.4;
+        color: rgba(28, 25, 20, 0.62);
+      }
+      .chips {
+        display: flex;
+        gap: 12px;
+        margin-top: auto;
+      }
+      .chip {
+        padding: 9px 18px;
+        border: 1px solid rgba(28, 25, 20, 0.12);
+        border-radius: 999px;
+        background: #fff;
+        font-family: Heading;
+        font-size: 20px;
+        font-weight: 500;
+        color: rgba(28, 25, 20, 0.75);
+      }
+      .chip.accent {
+        border-color: rgba(236, 85, 32, 0.35);
+        background: rgba(255, 106, 48, 0.08);
+        color: #d24a17;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dots"></div>
+    <div class="glow"></div>
+    <div class="wrap">
+      <div class="brand">
+        <svg width="60" height="60" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#1c1914" />
+          <rect x="8" y="7" width="16" height="5" rx="1.5" fill="#ff5a1f" />
+          <rect
+            x="8"
+            y="14"
+            width="11"
+            height="5"
+            rx="1.5"
+            fill="#ff5a1f"
+            fill-opacity=".75"
+          />
+          <rect
+            x="8"
+            y="21"
+            width="5"
+            height="5"
+            rx="1.5"
+            fill="#ff5a1f"
+            fill-opacity=".5"
+          />
+        </svg>
+        <span>Fabrik</span>
+      </div>
+      <h1>Un vrai site React,<br /><em>même sans être développeur.</em></h1>
+      <p>
+        Un template gratuit pensé pour les designers : une base prête, que ton
+        assistant IA sait faire évoluer.
+      </p>
+      <div class="chips">
+        <span class="chip accent">Pensé pour les designers</span>
+        <span class="chip">React 19</span>
+        <span class="chip">Tailwind 4</span>
+        <span class="chip">shadcn/ui</span>
+        <span class="chip">Open source</span>
+      </div>
+    </div>
+  </body>
+</html>
