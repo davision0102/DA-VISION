@@ -36,6 +36,7 @@ Fabrik, c'est cette base. Je l'utilise pour mes propres projets et je la partage
 - **Un design system en variables** : couleurs, polices et arrondis sont réglés dans un seul fichier. Tu changes la couleur principale, tout le site suit.
 - **Le mode clair et le mode sombre**, sans rien faire.
 - **Un mode d'emploi pour ton assistant IA** : il sait comment ajouter une page ou un composant sans casser le reste.
+- **De ta maquette au site** : partage un lien Figma ou une capture, l'assistant l'intègre avec les composants du projet.
 - **Des garde-fous** : si quelque chose ne va pas dans le code, tu es prévenu avant que ce soit en ligne.
 - **La mise en ligne gratuite** sur GitHub Pages, avec une vraie adresse à partager.
 
@@ -81,6 +82,8 @@ Ouvre le chat de l'assistant dans l'éditeur et écris comme tu parlerais à un 
 - « Remplace la page d'accueil par mon portfolio : une intro, puis mes projets en grille »
 - « Ajoute une page contact avec un formulaire nom, e-mail et message »
 - « Utilise la police Fraunces pour les titres »
+- « Intègre cette maquette : » suivi d'un lien Figma ou d'une capture d'écran
+- « Fais une passe de finition sur la page d'accueil »
 
 Il lit le mode d'emploi du projet et suit ses règles. Regarde le résultat dans ton navigateur et ajuste au fur et à mesure.
 
@@ -113,18 +116,47 @@ Ensuite, chaque fois que tu veux publier : demande à ton assistant « enregistr
 
 Les assistants (Claude Code, Cursor, Codex, Copilot…) lisent le fichier `AGENTS.md` à la racine du projet. Il leur explique comment le projet est rangé et les règles à suivre, par exemple utiliser les couleurs du thème plutôt que d'en inventer.
 
-Pour les tâches courantes, il y a aussi des fiches pas à pas dans `.agents/skills/`. L'assistant choisit tout seul la bonne :
+Pour les tâches courantes, le projet contient aussi 11 fiches pas à pas, appelées « skills », dans `.agents/skills/`. Tu n'as pas besoin de les connaître : l'assistant choisit tout seul la bonne selon ta demande.
 
-| Fiche           | Pour…                                                  |
-| --------------- | ------------------------------------------------------ |
-| `add-page`      | créer une page et l'ajouter au menu                    |
-| `add-component` | installer un composant ou en créer un                  |
-| `add-form`      | faire un formulaire avec vérification des champs       |
-| `fetch-data`    | afficher des données venant d'une API                  |
-| `add-test`      | écrire un test                                         |
-| `design-system` | respecter les couleurs, les polices et les espacements |
-| `deploy`        | mettre le site en ligne                                |
-| `rebrand`       | renommer le projet et changer son identité             |
+**Pour le design**
+
+| Skill           | Ce qu'il fait faire à l'assistant                                         |
+| --------------- | ------------------------------------------------------------------------- |
+| `from-figma`    | transformer ta maquette (lien Figma ou capture) en vraie page, fidèlement |
+| `polish-ui`     | faire une passe de finition : états, mobile, mode sombre, accessibilité   |
+| `add-motion`    | ajouter des animations utiles, avec les bonnes durées, sans en faire trop |
+| `design-system` | respecter tes couleurs, tes polices et tes espacements                    |
+
+**Pour construire**
+
+| Skill           | Ce qu'il fait faire à l'assistant                |
+| --------------- | ------------------------------------------------ |
+| `add-page`      | créer une page et l'ajouter au menu              |
+| `add-component` | installer un composant ou en créer un            |
+| `add-form`      | faire un formulaire avec vérification des champs |
+| `fetch-data`    | afficher des données venant d'une API            |
+
+**Pour le projet**
+
+| Skill      | Ce qu'il fait faire à l'assistant          |
+| ---------- | ------------------------------------------ |
+| `add-test` | écrire un test                             |
+| `deploy`   | mettre le site en ligne                    |
+| `rebrand`  | renommer le projet et changer son identité |
+
+### Aller plus loin : des skills design à installer
+
+D'autres designers partagent leurs propres skills, et ils se marient très bien avec Fabrik. Ils ne sont pas inclus pour que tu aies toujours leur dernière version : installe ceux qui t'intéressent, d'une commande dans le terminal du projet.
+
+- **[Impeccable](https://github.com/pbakaus/impeccable)**, de Paul Bakaus : un vocabulaire de design pour ton assistant. Tu peux lui demander de critiquer une page, de la peaufiner, de rendre le design plus audacieux, et il repère les tics visuels typiques des sites faits par IA.
+  ```bash
+  npx impeccable install
+  ```
+- **[Les skills d'Emil Kowalski](https://github.com/emilkowalski/skills)**, le créateur de Sonner et Vaul : animations, détails d'interface, tests de résistance avec des contenus extrêmes. Le plus connu est `emil-design-eng`, qui apprend à l'assistant à soigner les détails qui font qu'une interface paraît haut de gamme.
+  ```bash
+  npx skills@latest add emilkowalski/skills
+  ```
+- **Le serveur MCP de Figma** : si tu utilises Figma, il permet à l'assistant de lire directement tes maquettes à partir d'un lien. Le skill `from-figma` s'en sert automatiquement. L'installation dépend de ton éditeur : cherche « Figma MCP » dans sa documentation.
 
 ## Personnaliser à la main
 

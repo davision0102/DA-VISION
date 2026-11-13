@@ -5,6 +5,8 @@ Format ouvert : https://agents.md
 
 ## Le projet
 
+Le public visé comprend des designers et des personnes qui ne codent pas : explique simplement ce que tu fais, sans jargon, et propose de vérifier le rendu dans le navigateur.
+
 Fabrik est un starter React : une base propre pour lancer un site, une app ou un prototype.
 L'identité du projet (nom, textes, liens GitHub) est centralisée dans `src/config/site.ts`.
 
@@ -66,6 +68,9 @@ Recettes dans `.agents/skills/` — lis la bonne avant de commencer :
 - `add-form` — formulaire avec validation (react-hook-form + zod)
 - `fetch-data` — charger des données d'une API
 - `deploy` — mettre le site en ligne (GitHub Pages déjà configuré)
+- `from-figma` — intégrer une maquette (lien Figma, capture) fidèlement
+- `polish-ui` — passe de finition : états, responsive, mode sombre, accessibilité
+- `add-motion` — animations utiles, bonnes durées, respect de reduced-motion
 
 ## Outils MCP
 

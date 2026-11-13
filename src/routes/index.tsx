@@ -101,7 +101,7 @@ function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-16 pb-20 sm:px-6 md:pt-24 lg:grid-cols-[1.1fr_1fr]">
-        <div className="min-w-0 animate-in duration-700 fade-in slide-in-from-bottom-3">
+        <div className="min-w-0 animate-in duration-700 fade-in slide-in-from-bottom-3 motion-reduce:animate-none">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs font-medium text-muted-foreground backdrop-blur">
             <span className="size-1.5 rounded-full bg-brand" />
             {site.tagline}
@@ -154,7 +154,7 @@ function Hero() {
 
 function TerminalPreview() {
   return (
-    <div className="min-w-0 animate-in delay-150 duration-700 fill-mode-both fade-in slide-in-from-bottom-6">
+    <div className="min-w-0 animate-in delay-150 duration-700 fill-mode-both fade-in slide-in-from-bottom-6 motion-reduce:animate-none">
       <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-2xl ring-1 shadow-foreground/10 ring-foreground/5">
         <div className="flex items-center gap-2 border-b border-border px-4 py-3">
           <span className="size-3 rounded-full bg-foreground/15" />
