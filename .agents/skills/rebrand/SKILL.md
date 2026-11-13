@@ -12,7 +12,7 @@ Quand le template sert de base à un nouveau projet, voici tout ce qui porte l'i
 1. **`src/config/site.ts`** — `name`, `tagline`, `description`, `repo` (`utilisateur/depot` sur GitHub), `demoUrl`. Tout le site lit ces valeurs.
 2. **`package.json`** — le champ `name` (minuscules, tirets).
 3. **`index.html`** — `<title>`, `<meta name="description">`, `theme-color` et les balises `og:*` (titre, description, URL de la démo).
-4. **`public/og-image.png`** — l'aperçu affiché lors d'un partage (1200 × 630). À refaire avec le nouveau nom.
+4. **`public/og-image.png`** — l'aperçu affiché lors d'un partage (1200 × 630). Sa source est `docs/og-image.html` : y changer le nom et les textes, puis faire une capture de 1200 × 630 (par exemple Chrome headless : `--window-size=1200,630 --screenshot=public/og-image.png`).
 5. **`public/favicon.svg`** et **`src/components/logo.tsx`** — la marque. Le logo utilise `fill-foreground` et `fill-brand` : il suit le thème automatiquement.
 6. **Couleur signature** — `--brand` dans `src/index.css` (voir le skill `design-system`).
 7. **`README.md`** et **`AGENTS.md`** — le nom et la description du projet.
