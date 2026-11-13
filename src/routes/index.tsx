@@ -21,33 +21,33 @@ export const Route = createFileRoute('/')({
 const features = [
   {
     icon: Bot,
-    title: 'Prêt pour l’IA',
-    text: 'AGENTS.md, skills et serveur MCP shadcn inclus : Claude, Codex ou Cursor savent comment travailler dans le projet dès la première ligne.',
+    title: 'Pensé pour travailler avec une IA',
+    text: 'Un fichier AGENTS.md explique le projet à ton assistant (Claude, Codex, Cursor…), et des fiches pratiques lui montrent comment ajouter une page ou un composant proprement.',
   },
   {
     icon: Layers,
-    title: 'Composants shadcn/ui',
-    text: 'Des composants accessibles basés sur Base UI, que tu possèdes et modifies librement. Ajoute-en un avec une seule commande.',
+    title: 'Des composants prêts à l’emploi',
+    text: 'Boutons, champs, fenêtres, cartes… basés sur shadcn/ui. Le code est dans ton projet, tu le modifies comme tu veux, et tu en ajoutes d’autres en une commande.',
   },
   {
     icon: RouteIcon,
-    title: 'Routing typé',
-    text: 'TanStack Router génère les routes à partir des fichiers : un fichier dans src/routes, une page, des liens vérifiés par TypeScript.',
+    title: 'Une page, un fichier',
+    text: 'Pour créer une page, tu ajoutes un fichier dans src/routes. Si un lien pointe vers une page qui n’existe pas, le projet te le signale avant la mise en ligne.',
   },
   {
     icon: MoonStar,
-    title: 'Mode sombre',
-    text: 'Thème clair et sombre basé sur des variables CSS, sans flash au chargement. Change une couleur, tout suit.',
+    title: 'Mode clair et sombre',
+    text: 'Les deux thèmes marchent dès le départ, et le site se souvient du choix du visiteur. Pour changer la couleur principale, tu modifies une seule ligne.',
   },
   {
     icon: ShieldCheck,
-    title: 'Qualité intégrée',
-    text: 'ESLint, Prettier, Vitest, hooks de commit et CI GitHub : les erreurs sont attrapées avant d’arriver sur main.',
+    title: 'Moins de bugs en ligne',
+    text: 'Le code est vérifié et mis en forme à chaque commit, et les tests tournent sur GitHub à chaque envoi. Les erreurs se voient avant d’arriver sur le site.',
   },
   {
     icon: Sparkles,
-    title: 'Rapide, vraiment',
-    text: 'Vite 8 et Tailwind CSS 4 : démarrage en moins d’une seconde et rechargement instantané à chaque sauvegarde.',
+    title: 'En ligne en un push',
+    text: 'Le site se publie tout seul sur GitHub Pages dès que tu envoies ton code. Vercel ou Netlify marchent aussi sans réglage particulier.',
   },
 ]
 
@@ -63,16 +63,16 @@ const stack = [
 
 const steps = [
   {
-    title: 'Crée ton projet',
-    text: 'Clique sur « Utiliser ce template » sur GitHub ou copie-le avec degit.',
+    title: 'Copie le template',
+    text: 'Clique sur « Utiliser ce template » sur GitHub, ou lance la commande degit ci-dessus.',
   },
   {
-    title: 'Lance-le',
-    text: 'npm install puis npm run dev : ton site tourne sur localhost.',
+    title: 'Lance le site',
+    text: 'npm install, puis npm run dev. Ton site s’ouvre sur ton ordinateur et se met à jour à chaque sauvegarde.',
   },
   {
-    title: 'Construis avec ton IA',
-    text: 'Décris ce que tu veux à ton assistant : il suit les conventions du projet.',
+    title: 'Construis ton projet',
+    text: 'Modifie les pages toi-même ou demande à ton assistant IA : il suit les règles du projet.',
   },
 ]
 
@@ -108,8 +108,8 @@ function Hero() {
           </span>
 
           <h1 className="mt-6 text-5xl leading-[1.02] font-semibold tracking-tight sm:text-6xl lg:text-7xl">
-            Fabrique ton prochain projet{' '}
-            <span className="text-brand">en minutes.</span>
+            Démarre ton projet React{' '}
+            <span className="text-brand">sans rien configurer.</span>
           </h1>
 
           <p className="mt-6 max-w-xl text-lg text-pretty text-muted-foreground">
@@ -161,7 +161,7 @@ function TerminalPreview() {
           <span className="size-3 rounded-full bg-foreground/15" />
           <span className="size-3 rounded-full bg-foreground/15" />
           <span className="ml-2 font-mono text-xs text-muted-foreground">
-            mon-projet — zsh
+            mon-projet · zsh
           </span>
         </div>
         <pre className="overflow-x-auto p-5 font-mono text-[13px] leading-7">
@@ -233,9 +233,9 @@ function Features() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
       <SectionHeading
-        eyebrow="Ce qui est inclus"
-        title="Tout ce qu’il faut, rien de trop."
-        text="Les choix ennuyeux sont déjà faits. Tu passes directement à la partie intéressante."
+        eyebrow="Ce qu’il y a dedans"
+        title="Tout ce qu’on règle d’habitude au début d’un projet."
+        text="Fabrik s’occupe de la configuration pour que tu commences directement par ce qui compte : ton site."
       />
 
       <div className="mt-14 grid gap-px overflow-hidden rounded-3xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
@@ -261,10 +261,7 @@ function Features() {
 function Steps() {
   return (
     <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6">
-      <SectionHeading
-        eyebrow="Démarrage"
-        title="De zéro à en ligne en trois étapes."
-      />
+      <SectionHeading eyebrow="Démarrage" title="Comment ça marche" />
       <ol className="mt-14 grid gap-6 md:grid-cols-3">
         {steps.map((step, i) => (
           <li
@@ -292,11 +289,11 @@ function FinalCta() {
           className="pointer-events-none absolute -bottom-32 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full bg-brand/40 blur-3xl"
         />
         <h2 className="relative text-3xl font-semibold tracking-tight sm:text-5xl">
-          À toi de fabriquer.
+          Prêt à commencer ?
         </h2>
         <p className="relative mx-auto mt-4 max-w-lg text-background/70">
-          Gratuit, open source, et pensé pour être modifié. Prends-le, casse-le,
-          fais-en le tien.
+          C’est gratuit et open source. Utilise-le pour un site perso, un
+          prototype ou un vrai produit, et adapte-le à ta façon.
         </p>
         <div className="relative mt-8 flex flex-wrap justify-center gap-3">
           <a

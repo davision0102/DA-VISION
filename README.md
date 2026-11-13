@@ -4,34 +4,41 @@
 
 # Fabrik
 
-**Le starter React prêt pour l’IA.**
-Une base moderne, propre et documentée pour lancer un site, une app ou un prototype en quelques minutes — avec ton assistant IA déjà briefé.
+Un template React gratuit pour démarrer un site ou une app sans passer une heure à tout configurer.
 
 [![CI](https://github.com/davision0102/fabrik/actions/workflows/ci.yml/badge.svg)](https://github.com/davision0102/fabrik/actions/workflows/ci.yml)
 [![Deploy](https://github.com/davision0102/fabrik/actions/workflows/deploy.yml/badge.svg)](https://davision0102.github.io/fabrik/)
-![React 19](https://img.shields.io/badge/React-19-149eca)
-![Vite 8](https://img.shields.io/badge/Vite-8-646cff)
-![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8)
 ![Licence MIT](https://img.shields.io/badge/licence-MIT-ff5a1f)
 
-[**Voir la démo**](https://davision0102.github.io/fabrik/) · [**Utiliser ce template →**](https://github.com/davision0102/fabrik/generate)
+[Voir la démo](https://davision0102.github.io/fabrik/) · [Utiliser ce template](https://github.com/davision0102/fabrik/generate)
 
 <img src="docs/screenshot.png" alt="Page d'accueil de Fabrik" width="860" />
 
 </div>
 
-## Pourquoi Fabrik
+## Pourquoi j'ai fait ça
 
-Démarrer un projet, c'est souvent une heure de configuration avant d'écrire la première ligne utile. Fabrik fait les choix ennuyeux à ta place et prépare le terrain pour que ton assistant IA (Claude Code, Codex, Cursor…) travaille proprement dès le départ.
+À chaque nouveau projet, je refaisais la même chose : installer React, régler Tailwind, ajouter des composants, le mode sombre, le lint, les tests, la mise en ligne… Avant d'écrire la moindre ligne utile, la matinée était passée.
 
-- **Prêt pour l’IA** — `AGENTS.md`, des skills pas à pas et le serveur MCP shadcn sont inclus.
-- **Composants shadcn/ui** — accessibles, basés sur Base UI, et entièrement modifiables.
-- **Routing typé** — un fichier dans `src/routes/`, une page ; les liens cassés ne compilent pas.
-- **Mode sombre** — thème clair/sombre par variables CSS, sans flash au chargement.
-- **Qualité intégrée** — ESLint, Prettier, Vitest, hooks de commit et CI GitHub.
-- **Rapide** — Vite 8 et Tailwind CSS 4, rechargement instantané.
+Fabrik, c'est cette base, faite une bonne fois pour toutes. Je l'utilise pour mes propres projets et je la partage telle quelle.
+
+J'y ai aussi ajouté ce qui me manquait quand je code avec une IA : des instructions claires pour que l'assistant comprenne le projet au lieu de deviner.
+
+## Ce qu'il y a dedans
+
+- React 19, TypeScript, Vite 8 et Tailwind CSS 4
+- Des composants [shadcn/ui](https://ui.shadcn.com) : boutons, champs, fenêtres, cartes. Ils sont dans ton projet, tu les modifies librement.
+- Des pages créées à partir des fichiers grâce à TanStack Router : un fichier dans `src/routes/` donne une page.
+- Un mode clair et un mode sombre, sans clignotement au chargement
+- ESLint, Prettier et Vitest, lancés automatiquement à chaque commit et sur GitHub
+- Une mise en ligne automatique sur GitHub Pages
+- Un fichier `AGENTS.md` et 8 fiches pratiques pour les assistants IA (plus de détails plus bas)
 
 ## Démarrer
+
+Le plus simple : clique sur **Use this template** en haut de cette page, puis clone ton nouveau dépôt.
+
+Tu peux aussi le copier en ligne de commande :
 
 ```bash
 npx degit davision0102/fabrik mon-projet
@@ -40,75 +47,74 @@ npm install
 npm run dev
 ```
 
-Le site tourne sur [localhost:5173](http://localhost:5173). Tu peux aussi cliquer sur **Use this template** en haut de la page GitHub.
+Le site s'ouvre sur [localhost:5173](http://localhost:5173) et se recharge à chaque sauvegarde.
 
-Puis renomme le projet : modifie `src/config/site.ts`, ou demande simplement à ton assistant IA « renomme le projet en … » — il suivra le skill `rebrand`.
+Pour lui donner ton nom, ouvre `src/config/site.ts` : le nom, la description et les liens sont tous au même endroit.
 
-## Commandes
+## Les commandes
 
-| Commande          | Rôle                                           |
-| ----------------- | ---------------------------------------------- |
-| `npm run dev`     | serveur de développement                       |
-| `npm run build`   | vérification TypeScript + build production     |
-| `npm run preview` | prévisualiser le build                         |
-| `npm run lint`    | ESLint                                         |
-| `npm run format`  | Prettier (trie aussi les classes Tailwind)     |
-| `npm test`        | tests Vitest (`npm run test:watch` en continu) |
+| Commande          | Ce qu'elle fait                                         |
+| ----------------- | ------------------------------------------------------- |
+| `npm run dev`     | lance le site en local                                  |
+| `npm run build`   | vérifie le code et prépare la version à mettre en ligne |
+| `npm run preview` | affiche cette version en local                          |
+| `npm run lint`    | cherche les erreurs dans le code                        |
+| `npm run format`  | remet le code en forme                                  |
+| `npm test`        | lance les tests                                         |
 
 ## Travailler avec une IA
 
-Fabrik est pensé pour être utilisé avec un assistant de code.
+Si tu utilises Claude Code, Codex, Cursor ou Copilot, ils lisent le fichier `AGENTS.md` à la racine. Il leur explique la structure du projet, les commandes et les règles à suivre, comme les couleurs du thème ou l'endroit où mettre une nouvelle page.
 
-| Fichier           | Rôle                                                                |
-| ----------------- | ------------------------------------------------------------------- |
-| `AGENTS.md`       | les règles du projet, lues par Claude Code, Codex, Cursor, Copilot… |
-| `CLAUDE.md`       | renvoie vers `AGENTS.md` pour Claude Code                           |
-| `.agents/skills/` | recettes pas à pas (`.claude/skills` pointe vers ce dossier)        |
-| `.mcp.json`       | serveur MCP shadcn : l'IA cherche et installe les composants        |
+Pour les tâches courantes, il y a aussi des fiches pas à pas dans `.agents/skills/` :
 
-Skills inclus :
+| Fiche           | Pour…                                                  |
+| --------------- | ------------------------------------------------------ |
+| `add-page`      | créer une page et l'ajouter au menu                    |
+| `add-component` | installer un composant ou en créer un                  |
+| `add-form`      | faire un formulaire avec vérification des champs       |
+| `fetch-data`    | afficher des données venant d'une API                  |
+| `add-test`      | écrire un test                                         |
+| `design-system` | respecter les couleurs, les polices et les espacements |
+| `deploy`        | mettre le site en ligne                                |
+| `rebrand`       | renommer le projet et changer son identité             |
 
-- **add-page** — créer une page et l'ajouter à la navigation
-- **add-component** — installer un composant shadcn/ui ou en créer un
-- **design-system** — couleurs, polices et règles visuelles
-- **rebrand** — renommer le projet et changer son identité
-- **add-test** — écrire un test Vitest + Testing Library
-- **add-form** — formulaire avec validation (react-hook-form + zod)
-- **fetch-data** — charger des données d'une API
-- **deploy** — mettre le site en ligne
+Concrètement, tu peux demander « ajoute une page tarifs avec trois offres » et l'assistant suivra la fiche `add-page` au lieu d'improviser.
 
-Essaie par exemple : _« ajoute une page tarifs avec trois offres »_.
+Le fichier `.mcp.json` connecte aussi l'assistant au catalogue shadcn, pour qu'il puisse trouver et installer des composants tout seul.
 
 ## Mettre en ligne
 
-Le site se publie tout seul sur **GitHub Pages** à chaque push sur `main` (`.github/workflows/deploy.yml`). Une seule action à faire : **Settings → Pages → Source : GitHub Actions**.
+Le site se publie sur GitHub Pages à chaque envoi sur `main`. Il y a un seul réglage à faire, une fois : dans ton dépôt, va dans **Settings › Pages** et choisis **GitHub Actions** comme source.
 
-Vercel, Netlify et Cloudflare Pages fonctionnent aussi sans configuration : le skill `deploy` détaille chaque option.
+Vercel, Netlify et Cloudflare Pages fonctionnent aussi : tu importes le dépôt et ils détectent tout seuls qu'il s'agit d'un projet Vite. La fiche `deploy` explique les petites différences.
 
-## Structure
+## Comment c'est rangé
 
 ```
 src/
   config/site.ts      nom, textes et liens du projet
-  routes/             une page = un fichier
-  components/         composants de l'app
-  components/ui/      composants shadcn/ui
-  hooks/              hooks React
-  index.css           thème : couleurs, polices, arrondis
-.agents/skills/       skills pour l'IA
+  routes/             les pages (un fichier = une page)
+  components/         les composants du site
+  components/ui/      les composants shadcn/ui
+  hooks/              la logique réutilisable
+  index.css           le thème : couleurs, polices, arrondis
+.agents/skills/       les fiches pour les assistants IA
 ```
 
 ## Personnaliser
 
-- **Nom et textes** : `src/config/site.ts`
-- **Couleur signature** : `--brand` dans `src/index.css` (clair et sombre)
-- **Polices** : `--font-heading` et `--font-sans` dans `src/index.css`
-- **Nouveau composant** : `npx shadcn@latest add <nom>`, visible ensuite sur la page `/ui`
+- **Le nom et les textes** se trouvent dans `src/config/site.ts`.
+- **La couleur principale** est la variable `--brand` dans `src/index.css`. Il y en a une pour le mode clair et une pour le mode sombre.
+- **Les polices** se règlent avec `--font-heading` et `--font-sans`, dans le même fichier.
+- **Un nouveau composant** s'ajoute avec `npx shadcn@latest add <nom>`. Il apparaît ensuite sur la page `/ui` du site.
 
-## Stack
+## Contribuer
 
-[React 19](https://react.dev) · [TypeScript](https://www.typescriptlang.org) · [Vite 8](https://vite.dev) · [Tailwind CSS 4](https://tailwindcss.com) · [shadcn/ui](https://ui.shadcn.com) · [Base UI](https://base-ui.com) · [TanStack Router](https://tanstack.com/router) · [Vitest](https://vitest.dev) · [Lefthook](https://lefthook.dev)
+Une idée, un bug, une fiche qui manque ? Ouvre une issue ou une pull request, je regarde tout.
+
+Les modifications passent par une pull request : la branche `main` est protégée et les vérifications automatiques doivent être au vert avant de fusionner.
 
 ## Licence
 
-[MIT](LICENSE) — prends-le, modifie-le, fais-en le tien.
+MIT. Tu peux l'utiliser pour ce que tu veux, y compris des projets commerciaux.

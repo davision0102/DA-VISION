@@ -1,12 +1,12 @@
 /**
- * Identité du projet — c'est le seul endroit à modifier pour renommer le site.
+ * Identité du projet. C'est le seul endroit à modifier pour renommer le site.
  * Le nom, les textes principaux et les liens sont lus d'ici partout dans l'app.
  */
 export const site = {
   name: 'Fabrik',
-  tagline: 'Le starter React prêt pour l’IA',
+  tagline: 'Template React gratuit et open source',
   description:
-    'Une base moderne, propre et documentée pour lancer un site, une app ou un prototype en quelques minutes — avec ton assistant IA déjà briefé.',
+    'Fabrik est une base de départ pour tes sites et tes apps React. Les composants, le mode sombre, les tests et la mise en ligne sont déjà réglés, et ton assistant IA sait comment travailler dedans.',
   repo: 'davision0102/fabrik',
   /** Adresse de la démo en ligne (GitHub Pages, voir le skill `deploy`). */
   demoUrl: 'https://davision0102.github.io/fabrik/',

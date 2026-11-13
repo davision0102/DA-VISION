@@ -3,7 +3,7 @@ pre-commit:
   parallel: true
   jobs:
     - name: format
-      glob: '*.{ts,tsx,js,json,css,md,yml}'
+      glob: '*.{ts,tsx,js,json,css,md,yml,html}'
       run: npx prettier --write {staged_files}
       stage_fixed: true
     - name: lint
