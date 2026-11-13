@@ -7,14 +7,14 @@
 **Le starter React prêt pour l’IA.**
 Une base moderne, propre et documentée pour lancer un site, une app ou un prototype en quelques minutes — avec ton assistant IA déjà briefé.
 
-[![CI](https://github.com/davision0102/DA-VISION/actions/workflows/ci.yml/badge.svg)](https://github.com/davision0102/DA-VISION/actions/workflows/ci.yml)
-[![Deploy](https://github.com/davision0102/DA-VISION/actions/workflows/deploy.yml/badge.svg)](https://davision0102.github.io/DA-VISION/)
+[![CI](https://github.com/davision0102/fabrik/actions/workflows/ci.yml/badge.svg)](https://github.com/davision0102/fabrik/actions/workflows/ci.yml)
+[![Deploy](https://github.com/davision0102/fabrik/actions/workflows/deploy.yml/badge.svg)](https://davision0102.github.io/fabrik/)
 ![React 19](https://img.shields.io/badge/React-19-149eca)
 ![Vite 8](https://img.shields.io/badge/Vite-8-646cff)
 ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8)
 ![Licence MIT](https://img.shields.io/badge/licence-MIT-ff5a1f)
 
-[**Voir la démo**](https://davision0102.github.io/DA-VISION/) · [**Utiliser ce template →**](https://github.com/davision0102/DA-VISION/generate)
+[**Voir la démo**](https://davision0102.github.io/fabrik/) · [**Utiliser ce template →**](https://github.com/davision0102/fabrik/generate)
 
 <img src="docs/screenshot.png" alt="Page d'accueil de Fabrik" width="860" />
 
@@ -34,7 +34,7 @@ Démarrer un projet, c'est souvent une heure de configuration avant d'écrire la
 ## Démarrer
 
 ```bash
-npx degit davision0102/DA-VISION mon-projet
+npx degit davision0102/fabrik mon-projet
 cd mon-projet
 npm install
 npm run dev
